@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Bouquet {
     private List<Flower> components = new ArrayList<Flower>();
-    private Flower fl;
+  //  private Flower fl;
    public void addComponent(Flower component) {
         this.components.add(component);
     }
@@ -22,8 +22,8 @@ public class Bouquet {
         return components.get(f);
     }
     public Flower getAndRemoveFlower(int g) {
-        fl = components.get(g);
+        Flower flowerBuffer = components.get(g);
         removeComponent(g);
-        return fl;
+        return flowerBuffer;
     }
 }

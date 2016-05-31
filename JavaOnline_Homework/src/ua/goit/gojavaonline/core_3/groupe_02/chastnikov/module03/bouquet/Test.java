@@ -14,7 +14,7 @@ public class Test {
                     bouq.addComponent(new Tulip());
                     break;
                 case 1:
-                    bouq.addComponent(rbush.getRose());
+                    bouq.addComponent(Rosebush.getRose());
                     break;
                 case 2:
                     bouq.addComponent(new Chamomile());
