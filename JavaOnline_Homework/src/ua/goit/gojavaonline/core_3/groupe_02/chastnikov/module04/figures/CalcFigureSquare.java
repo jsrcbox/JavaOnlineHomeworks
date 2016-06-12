@@ -1,8 +1,12 @@
 package ua.goit.gojavaonline.core_3.groupe_02.chastnikov.module04.figures;
 
 
+import com.sun.org.apache.regexp.internal.RE;
+
 public class CalcFigureSquare {
     static double calcFigureSquare(Figure figure) {
+        if(! (figure instanceof Triangle || figure instanceof Rectangle || figure instanceof Circle))
+            throw new IllegalArgumentException("Unknown figure. The system recognizes a triangles, rectangles and circles");
         if(figure instanceof Triangle) {
             double sideA = ((Triangle)figure).sideA;
             double sideB = ((Triangle)figure).sideB;

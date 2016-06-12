@@ -9,6 +9,9 @@ public class Test {
         System.out.println(result);
         result = CalcFigureSquare.calcFigureSquare(new Circle(5.4));
         System.out.println(result);
+        result = CalcFigureSquare.calcFigureSquare(new Pentagon());
+        System.out.println(result);
+
 
     }
 }

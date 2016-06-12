@@ -4,8 +4,10 @@ package ua.goit.gojavaonline.core_3.groupe_02.chastnikov.module05;
 public class MaxMinArrayElement {
 
     private static int[] sortArray(int[] array) {
-
-            for (int i = 0; i < array.length-1; i++) {
+        try {
+            if (array.length > 10)
+                throw new IndexOutOfBoundsException();
+            for (int i = 0; i < array.length - 1; i++) {
                 int min = array[i];
                 int min_i = i;
                 for (int j = i + 1; j < array.length; j++) {
@@ -20,16 +22,19 @@ public class MaxMinArrayElement {
                     array[min_i] = tmp;
                 }
             }
-        return array;
+        } catch (IndexOutOfBoundsException indexExcep) {
+            System.out.println("The maximum possible length of the array is not more than 10");
+            System.exit(0);
         }
-
+        return array;
+    }
     static int getMinElement(int[] array) {
         sortArray(array);
         return array[0];
     }
 
-   static int getMaxElement(int[] array) {
-       sortArray(array);
-       return array[array.length-1];
+    static int getMaxElement(int[] array) {
+        sortArray(array);
+        return array[array.length - 1];
     }
 }
