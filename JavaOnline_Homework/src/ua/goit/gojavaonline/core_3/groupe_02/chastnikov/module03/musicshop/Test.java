@@ -6,9 +6,9 @@ public class Test {
     public static void main(String[] args) {
         MusicShop ms = new MusicShop();
 
-        ms.addToStock("guitar", 16);
-        ms.addToStock("piano", 2);
-        ms.addToStock("trumpet", 7);
+        ms.addToStock(new Guitar("guitar"), 16);
+        ms.addToStock(new Piano("piano"), 2);
+        ms.addToStock(new Trumpet("trumpet"), 7);
         System.out.print("on start:    ");
         ms.viewInstrumnentList();
 
